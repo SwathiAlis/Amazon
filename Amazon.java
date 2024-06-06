@@ -36,10 +36,10 @@ public class Amazon {
 
 		WebElement file=driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
 		file.click();
-//		TakesScreenshot ts=(TakesScreenshot)driver;
-//		File f=ts.getScreenshotAs(OutputType.FILE);
-//		File f1=new File("C:\\Users\\Keerthana\\eclipse-workspace\\Selenium\\Screenshot\\Image.png");
-//		FileUtils.copyFile(f, f1);
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File f=ts.getScreenshotAs(OutputType.FILE);
+		File f1=new File("C:\\Users\\Keerthana\\eclipse-workspace\\Selenium\\Screenshot\\Image.png");
+		FileUtils.copyFile(f, f1);
 		
 		Select s=new Select(file);
 		s.selectByVisibleText("Electronics");
@@ -67,7 +67,6 @@ public class Amazon {
 			}
 		}
 		driver.findElement(By.xpath("//input[@id=\"buy-now-button\"]")).click();
-	
 	}
 
 }
